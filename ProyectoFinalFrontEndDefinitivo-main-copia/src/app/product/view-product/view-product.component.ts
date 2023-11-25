@@ -14,7 +14,6 @@ import { ProductServiceService } from '../product-service.service';
 export class ViewProductComponent implements OnInit {
   productId: string = '';
   product: any; // Inicializa product como null
-  quantity: number = 1;
   
 
 
@@ -28,7 +27,7 @@ export class ViewProductComponent implements OnInit {
   }
 
   addToCart(product: any) {
-    this.cartService.addToCart({...product, quantity : this.quantity});
+    this.cartService.addToCart(product);
   }
 
   ngOnInit() {
