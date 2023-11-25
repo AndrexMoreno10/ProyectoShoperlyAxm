@@ -6,8 +6,9 @@ VALUES ('6', "Tecnologia"),
 	('7', "Hogar"),
 	('8', "Vehiculos"),
     ('9', "Inmuebles"),
-	('10', "Moda");
-    
+	('10', "Moda"),
+	('11', "Deportes");
+
 INSERT INTO supplier (id,address,name,phone)
 VALUES ('1095', "carrera 19 ", "Andres","312343452"),
 ('1096', "la mariela ", "Alejandra","3128777301");
