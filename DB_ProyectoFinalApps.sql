@@ -1,5 +1,5 @@
 CREATE DATABASE proyecto_final_Apps;
-use proyecto_final_Apps;
+use proyecto_final_Apps; 
 
 INSERT INTO categories (id,name)
 VALUES ('6', "Tecnologia"),
@@ -7,30 +7,26 @@ VALUES ('6', "Tecnologia"),
 	('8', "Vehiculos"),
     ('9', "Inmuebles"),
 	('10', "Moda");
-
-INSERT INTO categories (id,name)
-VALUES ('11', "Deportes");
-    
     
 INSERT INTO supplier (id,address,name,phone)
-VALUES ('1095', "carrera 19 ", "Andres","312343452");
+VALUES ('1095', "carrera 19 ", "Andres","312343452"),
+('1096', "la mariela ", "Alejandra","3128777301");
 
-INSERT INTO products (id,name,description,price,state,url,id_category_product,id_supplier_product)
-VALUES ('1', "Teclado", "Teclado Redragon Gaproductsmer",250000,"Disponible","https://www.apcomputadores.com/wp-content/uploads/2021/04/Sin-t%C3%ADtulo-1-12.jpg",'6','1095');
+INSERT INTO products (id, name, description, price, state, url, id_category_product, id_supplier_product) VALUES
+('25', 'Mancuernas', 'Mancuernas', '400000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700873982/j6w0akistuxul7ti85yy.jpg', '11', '1095'),
+('21', 'Mouse Redragon', 'Mouse', '250000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700873133/grwjstaqxusf6xyxqmjw.jpg', '6', '1096'),
+('20', 'Pantalon Cargo Azul', 'Pantalon', '200000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700871698/kpxzefscjzln6ovfgd18.jpg', '10', '1096'),
+('19', 'Pantalon Cargo Negro', 'Pantalon', '120000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700871534/bkifj8gc371pmprnc5yo.jpg', '10', '1095'),
+('18', 'Casa Lujosa', 'Casa', '6000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700871472/uq0cvsixzyzk7gwdbamr.jpg', '9', '1095'),
+('16', 'Casa Campestre', 'Casa', '50000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700871338/wumtkze1lvyyfwoob0is.jpg', '9', '1095'),
+('13', 'Escritorio en L', 'Escritorio', '600000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700870946/cxoerutaulygin8i16d7.jpg', '7', '1095'),
+('12', 'Cama', 'Cama', '2000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700870906/vii5wpvwkgknprzhhpzn.jpg', '7', '1096'),
+('11', 'Patines Semi-profesionales', 'Patines', '1000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700870832/cvhprddssdydfwlbvxd7.jpg', '11', '1096'),
+('10', 'Caminadora', 'Caminadora', '3000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700870755/cvjlpg4xpntocjmz2ore.jpg', '11', '1095'),
+('8', 'Carro BMW', 'Carro BMW', '30000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700869074/es5mvn3utduxpumkm5w3.jpg', '8', '1095'),
+('5', 'Carro Audi', 'Carro', '200000000', 'Disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1700868740/utkx4pfcgxtuxzqjldsa.jpg', '8', '1095'),
+('1', 'Teclado Redragon', 'Teclado', '250000', 'disponible', 'http://res.cloudinary.com/dyjcjvwb1/image/upload/v1699450048/yjio2t1wyytzxdz4y37l.jpg', '6', '1095');
 
-INSERT INTO products (id,name,description,price,state,url,id_category_product,id_supplier_product)
-VALUES ('8', "Celular", "Celular Iphone 14 Pro Max",250000,"Disponible","https://m.media-amazon.com/images/I/61sLuO6LiAL.jpg",'6','1095');
-
-INSERT INTO products (id,name,description,price,state,url,id_category_product,id_supplier_product)
-VALUES ('2', "Celular", "Celular Iphone 14 Pro Max",250000,"Disponible","https://m.media-amazon.com/images/I/61sLuO6LiAL.jpg",'6','1095');
-
-INSERT INTO products (id,name,description,price,state,url,id_category_product,id_supplier_product)
-VALUES ('3', "Celular", "Celular Iphone 14 Pro Max",250000,"Disponible","https://m.media-amazon.com/images/I/61sLuO6LiAL.jpg",'6','1095');
-
-INSERT INTO products (id,name,description,price,state,url,id_category_product,id_supplier_product)
-VALUES ('4', "Silla", "Silla mesedora",10000,"Disponible","https://media.manoamobiliario.com/57-home_default/silla-acapulco-mesedora.jpg",'7','1095');
-
-INSERT INTO user (id, address, age, email, is_admin, name, password, phone, username) VALUES ('100', 'carrera 18', 20 , 'admin', 1 , 'AndrexMoreno10', '123', '320', 'AndrexMoreno10');
-
-
-delete from products where id='2';
+INSERT INTO user (id, address, age, email, is_admin, name, password, phone, username)
+VALUES ('100', 'carrera 18', 20 , 'admin', 1 , 'AndrexMoreno10', '123', '320', 'AndrexMoreno10'),
+('101', 'carrera 19', 20 , 'user', 0 , 'alejita', '123', '320', 'alejita');
