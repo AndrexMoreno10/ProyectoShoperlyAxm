@@ -1,0 +1,70 @@
+<!-- user-management.component.html -->
+<table class="table" style="margin-left: 30px;">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Edad</th>
+        <th scope="col">Email</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Username</th>
+        <th scope="col">Contraseña</th>
+        <th scope="col">Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th scope="row">{{user.id}}</th>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.phone}}</td>
+        <td>{{user.address}}</td>
+        <td>{{user.username}}</td>
+        <td>{{user.password}}</td>
+        <td>{{user.isAdmin ? 'Admin' : 'Usuario'}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" style="margin-right: 8px;" (click)="eliminar(user.id)">Eliminar</button>
+          <button type="button" class="btn btn-warning" (click)="mostrarForm(user.id)">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <form>
+    <button style="margin-left: 300px;" type="button" class="btn btn-primary" (click)="mostrarForm()">Crear</button>
+  
+    <div *ngIf="crearEditar" style="margin: 20px 0 20px 300px;">
+      <label for="inputNombre">Nombre</label>
+      <input type="text" class="form-control" placeholder="Nombre" required="" autofocus="" id="nombre" name="nombre"
+        [(ngModel)]="nameUser">
+  
+      <label for="inputEdad">Edad</label>
+      <input type="number" class="form-control" placeholder="Edad" required="" autofocus="" id="edad" name="edad"
+        [(ngModel)]="ageUser">
+  
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" placeholder="Email" required="" autofocus="" id="email" name="email"
+        [(ngModel)]="emailUser">
+  
+      <label for="inputTelefono">Teléfono</label>
+      <input type="text" class="form-control" placeholder="Teléfono" required="" autofocus="" id="telefono" name="telefono"
+        [(ngModel)]="phoneUser">
+  
+      <label for="inputDireccion">Dirección</label>
+      <input type="text" class="form-control" placeholder="Dirección" required="" autofocus="" id="direccion"
+        name="direccion" [(ngModel)]="addressUser">
+  
+      <label for="inputUsername">Username</label>
+      <input type="text" class="form-control" placeholder="Username" required="" autofocus="" id="username" name="username"
+        [(ngModel)]="usernameUser">
+  
+      <label for="inputPassword">Contraseña</label>
+      <input type="password" class="form-control" placeholder="Contraseña" required="" autofocus="" id="password"
+        name="password" [(ngModel)]="passwordUser">
+  
+      <button type="button" class="btn btn-primary" style="margin-top: 10px;" (click)="finalizar()">Finalizar</button>
+    </div>
+  </form>
+  

@@ -1,0 +1,80 @@
+<table class="table" style="margin-left: 30px;">
+    <thead>
+        <tr>
+
+
+            <th scope="col">Id</th>
+            <th scope="col">Imagen</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Proveedor</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Cantidad</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+
+            <th scope="row">{{product.id}}</th>
+            <td><img [src]="product.url" alt="Product Image" width="100"> </td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.supplier?.name}}</td>
+            <td>{{product.category?.name}}</td>
+            <td>{{product.state}}</td>
+            <td>{{product.quantity}}</td>
+
+
+            <td>
+                <button type="button" class="btn btn-danger" style="margin-right: 8px;"
+                    (click)="eliminar(product.id)">Eliminar</button>
+                <button type="button" class="btn btn-warning" (click)="mostrarForm(product.id)">Editar</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<form>
+<button style="margin-left: 300px;" type="button" class="btn btn-primary" (click)="mostrarForm()">Crear</button>
+
+<div *ngIf="crearEditar" style="margin: 20px 0 20px 300px;">
+    <label for="inputImagen">Imagen</label>
+    <input type="file" class="form-control" (change)="onFileSelected($event)"accept=".jpg, .jpeg, .png, .gif, .bmp">
+    <img *ngIf="selectedImage" [src]="selectedImage" alt="Imagen seleccionada" width="100">
+    <button type="button" class="btn btn-primary" style="margin-top: 10px;" (click)="subirImagen()">Subir Imagen</button>
+    <br>
+    <br>
+    
+    <label for="inputNombre">Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre" required="" autofocus="" id="usuario" name="usuario"
+        [(ngModel)]="nameProduct">
+    <label for="inputCelular">Descripcion</label>
+    <input type="text" class="form-control" placeholder="Descripcion" required="" autofocus="" id="usuario"
+        name="usuario" [(ngModel)]="descriptionProduct">
+    <label for="inputDireccion">Precio</label>
+    <input type="text" class="form-control" placeholder="Precio" required="" autofocus="" id="usuario" name="usuario"
+        [(ngModel)]="priceProduct">
+    <label for="inputSupplier">proveedor</label>
+    <select [(ngModel)]="supplierProduct" name="supplierProduct" id="supplierProduct" class="form-select">
+        <option *ngFor="let supplier of suppliers" [ngValue]="supplier">{{supplier.name}}</option>
+    </select>
+    <label for="inputCategory">Categoria</label>
+    <select [(ngModel)]="categoryProduct" name="categoryProduct" id="categoryProduct" class="form-select">
+        <option *ngFor="let category of categories" [ngValue]="category">{{category.name}}</option>
+    </select>
+
+    <label for="inputDireccion">Estado</label>
+    <input type="text" class="form-control" placeholder="Estado" required="" autofocus="" id="usuario" name="usuario"
+        [(ngModel)]="stateProduct">
+
+    <label for="inputquantity">Cantidad</label>
+    <input type="text" class="form-control" placeholder="cantidad" required="" autofocus="" id="usuario" name="usuario"
+        [(ngModel)]="quantityProduct">
+
+    <button type="button" class="btn btn-primary" style="margin-top: 10px;" (click)="finalizar()">Finalizar</button>
+</div>

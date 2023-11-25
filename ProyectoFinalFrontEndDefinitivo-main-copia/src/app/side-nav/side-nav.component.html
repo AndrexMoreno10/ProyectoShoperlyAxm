@@ -1,0 +1,11 @@
+<div class="sidebar sidebar-expand-lg navbar-dark bg-dark m-3 mb-10">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="navbar-brand" style="margin-left: 7px; font-size: 25px; margin-bottom: 10px;">Categorias</a>
+    </li>
+    <li class="nav-item" *ngFor="let category of categories">
+      <a class="text-white" [routerLink]="['products/category/', category.id]"routerLinkActive="active" ariaCurrentWhenActive="page">{{category.name}} </a>
+    </li>
+    
+  </ul>
+</div>

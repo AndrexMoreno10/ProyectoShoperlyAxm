@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+  <a routerLink="/user" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-brand" (click)="showLoginApareces()"
+    style="margin-left: 60px;">SHOPERLYAXM</a>
+
+  <ul class="navbar-nav" style="margin-left: 500px;">
+    <!-- <li class="d-flex nav-item">
+      <a class="nav-link" routerLink="/products" routerLinkActive="active" ariaCurrentWhenActive="page">Productos destacados</a>
+    </li> -->
+  </ul>
+
+  <app-search-bar (searchText)="searchAction($event)" style="margin-left: 300px;"></app-search-bar>
+
+
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item" style="margin-left: 250px;">
+      <a class="nav-link" routerLink="/user/ShoppingCart" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-brand">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart" width="40"
+          height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+          <path d="M17 17h-11v-14h-2" />
+          <path d="M6 5l14 1l-1 7h-13" />
+        </svg>
+      </a>
+    </li>
+  </ul>
+
+  <ul class="navbar-nav ms-auto" style="margin-right: 40px;">
+    <li class="nav-item">
+      <button type="button" class="btn btn-danger" (click)="cerrarSesion()">Cerrar Sesion</button>
+    </li>
+  </ul>
+</nav>
+

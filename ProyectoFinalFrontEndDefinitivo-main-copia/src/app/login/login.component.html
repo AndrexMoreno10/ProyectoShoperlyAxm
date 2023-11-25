@@ -1,0 +1,115 @@
+<!-- Section: Design Block -->
+<section class="text-center text-lg-start" style="width: 1000px;" >
+    <style>
+       .cascading-right {
+        margin-right: -50px;
+      } 
+  
+      @media (max-width: 991.98px) {
+        .cascading-right {
+          margin-right: 0;
+        }
+      }
+    </style>
+  
+    <!-- Jumbotron -->
+    <div class="container py-4" style="margin: 100px 400px;">
+      <div class="row g-0 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card cascading-right" style="
+              background: hsla(0, 0%, 100%, 0.55);
+              backdrop-filter: blur(30px);
+              ">
+            <div class="card-body p-5 shadow-5 text-center">
+              <h2 class="fw-bold mb-5">Sign up now</h2>
+              <form>
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="text"class="form-control"  [(ngModel)]="userName" name="userName" id="userName"/>
+                  <label class="form-label" for="form3Example3">UserName</label>
+                </div>
+  
+                <!-- Password input -->
+                <div class="form-outline mb-4">
+                  <input type="password" class="form-control"  [(ngModel)]="password" name="password" id="password"/>
+                  <label class="form-label" for="form3Example4">Password</label>
+                </div>
+  
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-center mb-4">
+                  <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+  
+                <!-- Submit button -->
+                <button (click)="iniciarSesion(userName,password)" class="btn btn-primary btn-block mb-4">Iniciar Sesion</button>
+                <button routerLink="/register" class="btn btn-danger btn-block mb-4" style="margin-left: 20px;">Registrarse</button>
+                
+  
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                    </svg>
+                    
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    
+
+                    <!-- Twitter -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z" />
+                    </svg>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tiktok" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+                       </svg>
+                  </button>
+  
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+
+                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24"
+                       height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round"
+                       stroke-linejoin="round">
+                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                       <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />
+                       <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                       <path d="M16.5 7.5l0 .01" />
+                      </svg>  
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <img src="https://mdbootstrap.com/img/new/ecommerce/vertical/004.jpg" class="w-100 rounded-4 shadow-4"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+  </section>
+  <!-- Section: Design Block -->

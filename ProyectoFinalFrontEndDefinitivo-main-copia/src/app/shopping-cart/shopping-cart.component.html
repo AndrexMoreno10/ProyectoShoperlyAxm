@@ -1,0 +1,42 @@
+<div class="table-responsive table-striped" id="carrito" style="margin-left: 300px;">
+  <table class="table" id="lista-carrito">
+    <thead>
+      <tr>
+        <th colspan="5">
+          <h3>Detalle de productos</h3>
+        </th>
+
+      </tr>
+      <tr>
+        <th width="30%">Imagen</th>
+        <th width="20%">Nombre</th>
+        <th width="20%">Precio</th>
+        <th width="20%">Cantidad</th>
+
+        <th width="5%">Accion</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let item of cartItems">
+        <td><img [src]="item.url" alt="Imagen del producto" width="100"></td>
+        <td>{{ item.name}}</td>
+        <td>{{ item.price}}</td>
+        <td>{{ item.quantityclient }}</td>
+
+        <div class="btn-group" role="group" aria-label="Aumentar/Disminuir Cantidad">
+          <button type="button" class="btn btn-danger" (click)="decrementQuantity(item)">-</button>
+          <button type="button" class="btn btn-success ms-1" (click)="incrementQuantity(item)">+</button>
+          <button class="btn btn-warning ms-1" (click)="removeFromCart(item.id)">Eliminar</button>
+        </div>
+      </tr>
+
+
+
+    </tbody>
+
+  </table>
+
+  <button href="#" id="vaciar-carrito" class="btn btn-primary" (click)="clearCart()">Vaciar carrito</button>
+  <button class="btn btn-danger btn-block" (click)="buyCart()" style="margin-left: 20px;">Comprar</button>

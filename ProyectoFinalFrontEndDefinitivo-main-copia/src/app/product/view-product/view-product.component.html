@@ -1,0 +1,55 @@
+<div class="container mt-5 col-2 mx-auto d-flex align-items-center" style= "width: 100%; padding-right: 50px;" >
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{product.url}}" class="img-fluid" alt="Imagen del producto" />
+    </div>
+    <div class="col-md-6 text-center" style="margin: 100px 0 100px; border: 1px solid rgba(0,0,0,.1); ">
+      <br>
+      <h2>{{product.name}}</h2>
+      <br>
+      <div class="d-flex">
+        <label for="descripcion">Descripción:</label>
+        <p style="margin-left: 10px;">{{product.description}}</p>
+      </div>
+      
+      <br>
+      <h5 class="d-flex justify-content-start"><strong>Precio: ${{product.price}}</strong></h5>
+      <br>
+
+      <ul class="list-unstyled list-inline mb-0 d-flex justify-content-start">
+        <li class="list-inline-item me-0">
+          <i class="fas fa-star text-warning fa-xs"> </i>
+        </li>
+        <li class="list-inline-item me-0">
+          <i class="fas fa-star text-warning fa-xs"></i>
+        </li>
+        <li class="list-inline-item me-0">
+          <i class="fas fa-star text-warning fa-xs"></i>
+        </li>
+        <li class="list-inline-item me-0">
+          <i class="fas fa-star text-warning fa-xs"></i>
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-star-half-alt text-warning fa-xs"></i>
+        </li>
+        <li class="list-inline-item">
+          <p class="text-muted">4.5 (413)</p>
+        </li>
+      </ul>
+
+      <br>
+
+      <div class="form-group">
+        <div class="d-flex">
+          <label for="cantidad">Cantidad:</label>
+          <input [(ngModel)]="quantity" type="number" id="cantidad" name="cantidad" class="form-control" min="1" style="width: 40%; margin-left: 10px;">
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-center" style="margin-top: 30px;">
+        <button class="btn btn-primary me-2" (click)="addToCart(product)">Agregar al Carrito</button>
+        <!-- <button class="btn btn-danger" (click)="buyProduct(product.id)">Comprar</button> -->
+      </div>
+    </div>
+  </div>
+</div>

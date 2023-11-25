@@ -1,0 +1,40 @@
+<table class="table" style="margin-left: 300px;">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let supplier of suppliers">
+            <th scope="row">{{supplier.id}}</th>
+            <td>{{supplier.name}}</td>
+            <td>{{supplier.phone}}</td>
+            <td>{{supplier.address}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" style="margin-right: 8px;"
+                    (click)="eliminar(supplier.id)">Eliminar</button>
+                <button type="button" class="btn btn-warning" (click)="mostrarForm(supplier.id)">Editar</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<button style="margin-left: 300px;" type="button" class="btn btn-primary" (click)="mostrarForm()">Crear</button>
+
+<div *ngIf="crearEditar" style="margin: 20px 0 20px 300px;">
+    <label for="inputNombre" class="sr-only">Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre" required="" autofocus="" id="usuario" name="usuario"
+    [(ngModel)]="nameSupplier">
+    <label for="inputCelular" class="sr-only">Celular</label>
+    <input type="text" class="form-control" placeholder="Celular" required="" autofocus="" id="usuario" name="usuario"
+    [(ngModel)]="phoneSupplier">
+    <label for="inputDireccion" class="sr-only">Direccion</label>
+    <input type="text" class="form-control" placeholder="direccion" required="" autofocus="" id="usuario" name="usuario"
+    [(ngModel)]="addressSupplier">
+    <button type="button" class="btn btn-primary" style="margin-top: 10px;" (click)="finalizar()" >Finalizar</button>
+</div>

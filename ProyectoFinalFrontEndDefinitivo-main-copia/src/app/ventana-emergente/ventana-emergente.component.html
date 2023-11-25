@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido Administrador</title>
+    <!-- Agregar el enlace al archivo CSS de Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa; 
+        }
+
+        .welcome-container {
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff; 
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+        }
+
+
+    </style>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <a routerLink="/Login" routerLinkActive="active" ariaCurrentWhenActive="page" class="navbar-brand" 
+      style="margin-left: 60px;" (click)="borrarLocal()">SHOPERLYAXM </a>
+</nav>
+
+<body>
+
+    
+
+    <div class="container welcome-container centrarBoton">
+        <h2 class="text-center">¡No tienes Autorizacion!</h2>
+        <p class="text-center">Porfavor inicia sesion para poder ingresar a esta ruta</p>
+        <button type="button" class="btn btn-danger" (click)="borrarLocal()" style="margin-left: 240px;">Ir al login</button>
+    </div>
+
+
+
+    <!-- Agregar el enlace al archivo JS de Bootstrap y jQuery (opcional) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

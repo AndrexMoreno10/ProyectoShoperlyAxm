@@ -1,0 +1,63 @@
+/* .sidebar a{
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    background-color: black;
+    height: 100%;
+    position: relative;
+    } */
+
+ .active{
+    font-weight: bolder;
+ }
+
+ .sidebar {
+  width: 250px;
+  background-color: #333;
+  padding-top: 20px;
+  position: relative;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+
+  
+} 
+
+.nav-link {
+  color: #fff;
+}
+
+.submenu {
+  padding-left: 20px;
+  text-align: left;
+  display: none;
+  
+}
+
+.submenu a{
+  text-decoration: none;
+  text-align: left;
+  
+}
+
+.nav-item:hover .submenu {
+  display: block;
+}
+
+.sidebar li a{
+  text-decoration: none;
+}
+
+/* Agrega una línea divisoria entre enlaces */
+/* Agrega un espacio blanco después de "Categorias" */
+.nav-item:first-child {
+  margin-bottom: 20px;
+}
+
+/* Agrega una línea divisoria entre enlaces */
+.nav-item:not(:first-child) {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 10px;
+  margin-top: 10px;
+}
+

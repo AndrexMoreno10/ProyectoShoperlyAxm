@@ -1,0 +1,47 @@
+<div class="containerProductos">
+    <div *ngFor="let product of products">
+      <div class="container" >
+        <a class="sin-subrayado"  [routerLink]="['/user/product', product.id]">
+        <section class="mx-auto my-2" style="max-width: 23rem;" style="padding-left: 50px;">
+          <div class="card" style="padding-left: 80px;" style="width: 100%;" >
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light" >
+              <img src="{{product.url}}" class="img-fluid" style="width: 200px;">
+            </div>
+  
+            <div class="card-body">
+              <h5 class="card-title font-weight-bold">{{product.name}}</h5>
+              <ul class="list-unstyled list-inline mb-0">
+                <li class="list-inline-item me-0">
+                  <i class="fas fa-star text-warning fa-xs"> </i>
+                </li>
+                <li class="list-inline-item me-0">
+                  <i class="fas fa-star text-warning fa-xs"></i>
+                </li>
+                <li class="list-inline-item me-0">
+                  <i class="fas fa-star text-warning fa-xs"></i>
+                </li>
+                <li class="list-inline-item me-0">
+                  <i class="fas fa-star text-warning fa-xs"></i>
+                </li>
+                <li class="list-inline-item">
+                  <i class="fas fa-star-half-alt text-warning fa-xs"></i>
+                </li>
+                <li class="list-inline-item">
+                  <p class="text-muted">4.5 (413)</p>
+                </li>
+              </ul>
+              
+              <p class="mb-2" > <span style="color: #00a650; font:bold ;">Envio gratis</span></p>
+  
+    
+              <p class="mb-2">$ {{product.price}}</p>
+              <p class="card-text">{{product.description}}</p>
+              
+              
+            </div>
+          </div>
+        </section>
+        </a>
+      </div> 
+    </div>
+  </div>

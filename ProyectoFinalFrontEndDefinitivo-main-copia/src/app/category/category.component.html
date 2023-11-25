@@ -1,0 +1,30 @@
+<table class="table" style="text-align: center;">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories">
+            <th scope="row">{{category.id}}</th>
+            <td>{{category.name}}</td>
+            <td>
+                <button type="button" class="btn btn-danger" style="margin-right: 8px;"
+                    (click)="eliminar(category.id)">Eliminar</button>
+                <button type="button" class="btn btn-warning" (click)="mostrarForm(category.id)">Editar</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+<button style="margin-left: 300px;" type="button" class="btn btn-primary" (click)="mostrarForm()">Crear</button>
+
+<div *ngIf="crearEditar" style="margin: 20px 0 20px 300px;">
+    <label for="inputEmail" class="sr-only">Nombre</label>
+    <input type="text" class="form-control" placeholder="Nombre" required="" autofocus="" id="usuario" name="usuario"
+        [(ngModel)]="nameCategory">
+    <button type="button" class="btn btn-primary" style="margin-top: 10px;" (click)="finalizar()" >Finalizar</button>
+</div>
